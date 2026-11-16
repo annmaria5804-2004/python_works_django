@@ -1,0 +1,256 @@
+# ============================================================
+# PYTHON PRACTICE – NESTED LISTS & NESTED DICTIONARIES
+# ============================================================
+
+
+# 1. Display Marks of a Student
+marks = [
+    [78, 85, 90, 88],
+    [65, 72, 80, 75],
+    [90, 92, 85, 95]
+]
+
+print(marks[1])
+
+
+# 2. Sum of All Elements
+numbers = [
+    [10, 20, 30, 40],
+    [5, 15, 25, 35],
+    [2, 4, 6, 8]
+]
+
+total = 0
+
+for row in numbers:
+    for num in row:
+        total += num
+
+print("Total Sum:", total)
+
+
+# 3. Find the Largest Number (Without max())
+numbers = [
+    [12, 45, 23],
+    [67, 34, 89],
+    [10, 56, 78]
+]
+
+largest = numbers[0][0]
+
+for row in numbers:
+    for num in row:
+        if num > largest:
+            largest = num
+
+print("Largest Number:", largest)
+
+
+# 4. Count Even Numbers
+numbers = [
+    [12, 15, 18],
+    [21, 24, 27],
+    [30, 33, 36]
+]
+
+count = 0
+
+for row in numbers:
+    for num in row:
+        if num % 2 == 0:
+            count += 1
+
+print("Total Even Numbers:", count)
+
+
+# 5. Sum of Each Row
+numbers = [
+    [10, 20, 30],
+    [5, 15, 25],
+    [2, 4, 6]
+]
+
+for i in range(len(numbers)):
+    total = 0
+
+    for num in numbers[i]:
+        total += num
+
+    print("Row", i + 1, "Sum:", total)
+
+
+# 6. Smallest Number in Each Row (Without min())
+numbers = [
+    [12, 5, 18, 9],
+    [45, 23, 67, 10],
+    [8, 14, 3, 20]
+]
+
+for i in range(len(numbers)):
+    smallest = numbers[i][0]
+
+    for num in numbers[i]:
+        if num < smallest:
+            smallest = num
+
+    print("Row", i + 1, "Smallest:", smallest)
+
+
+# 7. Sum of Diagonal Elements
+matrix = [
+    [10, 20, 30],
+    [40, 50, 60],
+    [70, 80, 90]
+]
+
+total = 0
+
+for i in range(len(matrix)):
+    total += matrix[i][i]
+
+print("Diagonal Sum:", total)
+
+
+# 8. Display Elements Column by Column
+numbers = [
+    [10, 20, 30],
+    [40, 50, 60],
+    [70, 80, 90]
+]
+
+for i in range(len(numbers[0])):
+    for j in range(len(numbers)):
+        print(numbers[j][i], end=" ")
+
+    print()
+
+
+# ============================================================
+# NESTED DICTIONARIES
+# ============================================================
+
+
+# 9. Display Employee Salary
+employees = {
+    101: {"age": 25, "salary": 25000, "experience": 2},
+    102: {"age": 30, "salary": 40000, "experience": 5},
+    103: {"age": 28, "salary": 35000, "experience": 3}
+}
+
+print("Salary:", employees[102]["salary"])
+
+
+# 10. Total Marks of Each Student
+students = {
+    101: {"Maths": 80, "Physics": 75, "Chemistry": 90},
+    102: {"Maths": 65, "Physics": 85, "Chemistry": 70},
+    103: {"Maths": 90, "Physics": 95, "Chemistry": 85}
+}
+
+for student_id in students:
+    total = 0
+
+    for subject in students[student_id]:
+        total += students[student_id][subject]
+
+    print("Student", student_id, "Total:", total)
+
+
+# 11. Employee with Highest Salary (Without max())
+employees = {
+    101: {"salary": 25000},
+    102: {"salary": 45000},
+    103: {"salary": 35000},
+    104: {"salary": 50000}
+}
+
+highest_salary = 0
+employee_id = None
+
+for emp_id in employees:
+    salary = employees[emp_id]["salary"]
+
+    if salary > highest_salary:
+        highest_salary = salary
+        employee_id = emp_id
+
+print("Employee ID:", employee_id)
+print("Highest Salary:", highest_salary)
+
+
+# 12. Product Price After Discount
+products = {
+    101: {"price": 1000, "quantity": 2, "discount": 10},
+    102: {"price": 500, "quantity": 3, "discount": 20},
+    103: {"price": 2000, "quantity": 1, "discount": 15}
+}
+
+for product_id in products:
+    price = products[product_id]["price"]
+    quantity = products[product_id]["quantity"]
+    discount = products[product_id]["discount"]
+
+    total = price * quantity
+    discount_amount = total * discount / 100
+    final_price = total - discount_amount
+
+    print("Product", product_id, "Final Price:", int(final_price))
+
+
+# 13. Highest Scoring Subject
+students = {
+    101: {"Maths": 80, "Physics": 95, "Chemistry": 75},
+    102: {"Maths": 90, "Physics": 85, "Chemistry": 95},
+    103: {"Maths": 70, "Physics": 80, "Chemistry": 65}
+}
+
+for student_id in students:
+    highest = -1
+    highest_subject = ""
+
+    for subject in students[student_id]:
+        marks = students[student_id][subject]
+
+        if marks > highest:
+            highest = marks
+            highest_subject = subject
+
+    print("Student", student_id, "Highest Subject:", highest_subject)
+
+
+# 14. Employees Based on Salary
+employees = {
+    101: {"salary": 25000, "experience": 2},
+    102: {"salary": 40000, "experience": 5},
+    103: {"salary": 35000, "experience": 3},
+    104: {"salary": 28000, "experience": 1}
+}
+
+for emp_id in employees:
+    salary = employees[emp_id]["salary"]
+
+    if salary > 30000:
+        print("Employee ID:", emp_id, "Salary:", salary)
+
+
+# 15. Shopping Cart Total
+cart = {
+    101: {"price": 100, "quantity": 3},
+    102: {"price": 250, "quantity": 2},
+    103: {"price": 500, "quantity": 1}
+}
+
+total = 0
+
+for product_id in cart:
+    price = cart[product_id]["price"]
+    quantity = cart[product_id]["quantity"]
+
+    total += price * quantity
+
+print("Total Bill:", total)
+
+
+# ============================================================
+# END OF PRACTICE
+# ============================================================
