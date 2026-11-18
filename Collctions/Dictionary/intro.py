@@ -5,7 +5,7 @@
 > it is defined as {} , dict()
 > keys should be in str, or tuple. immutable
 > keys cannot be duplicated later values overwrite earlier ones.
->it is iterable
+>it is iterable(loop form)
 > order of elemnts are maintained
 > Insertion order is maintained.
 > Remember: a dictionary stores data as key:value pairs, and you normally access each value using its key.
@@ -75,7 +75,7 @@ print(elements_dict.popitem()) # pop and gaves last elemets in the dict >> o/p: 
 #============diff of tuple set dict==============================================================================
 """
 1. Tuple ()
-A tuple is an ordered and immutable collection.
+A tuple is an ordered and immutable collection(unchanged).
 - Ordered – maintains insertion order.
 - Immutable – cannot add, remove, or change elements after creation.
 - Allows duplicate values.
@@ -95,8 +95,8 @@ o/p:
 ========================================================================================================
 2. Set {}
 A set is an unordered collection of unique elements.
-- Unordered – does not support indexing.
-- Mutable – can add or remove elements.
+- Unordered - does not support indexing.
+- Mutable - can add or remove elements.
 - Does not allow duplicate values.
 - Does not support indexing.
 
@@ -110,8 +110,8 @@ o/p:
 
 3. Dictionary {key: value}
 A dictionary stores data in key-value pairs.
-- Ordered – maintains insertion order.
-- Mutable – can add, remove, and update values.
+- Ordered - maintains insertion order.
+- Mutable - can add, remove, and update values.
 - Keys must be unique.
 - Values can have duplicates.
 - Access values using keys, not indexes.
