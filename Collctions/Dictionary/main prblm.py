@@ -1,4 +1,4 @@
-#  dictionary[outer_key][inner_key] >> 101 102 103 all are the dict inside the dict students which is outer dict
+# dictionary[outer_key][inner_key] >> 101 102 103 all are the dict inside the dict students which is outer dict
 # 5th nov 2026================================================= 
 
 students ={

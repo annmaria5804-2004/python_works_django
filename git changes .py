@@ -7,3 +7,8 @@
 # Important: Whenever you modify your Python files on your laptop, use these three commands to update GitHub.
 
 # You've completed your first GitHub upload! 🚀
+#---------------------------------------------------------------------------
+# git status
+# git add .
+# git commit -m "Added new Python file"
+# git push

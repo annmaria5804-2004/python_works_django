@@ -79,3 +79,11 @@ obj2.pay(3000)
 # 3. pay() – Abstract method.
 # 4. GooglePay – Child class.
 # 5. pay() – Implements the abstract 
+
+#---------------------------------------------
+# You are creating two objects, but assigning both to the same variable obj.
+# - First, obj = phonepe() creates a PhonePe object.
+# - Next, obj = GooglePay() replaces that reference with a GooglePay object.
+# - Finally, obj.pay(2000) calls the GooglePay method.
+# Important: Both GooglePay and PhonePe must implement the abstract pay() method. 
+# Otherwise, Python will not allow you to create their objects.
