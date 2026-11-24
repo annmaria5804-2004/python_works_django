@@ -1,16 +1,16 @@
 
 # To-Do List Application
-
-tasks = []
+#=========================================================================
+tasks = [] # Create an empty list
 
 # Function to add a task
 def add_task():
 
-    task = input("Enter your task: ")
+    task = input("Enter your task: ") # append() is a list method used to add a new item to the end of a list.
 
     tasks.append({
         "name": task,
-        "completed": False
+        "completed": False # It tells us whether the task is completed or not.
     })
 
     print("Task added successfully!")
@@ -19,13 +19,13 @@ def add_task():
 # Function to view tasks
 def view_tasks():
 
-    if len(tasks) == 0:
+    if len(tasks) == 0: # calculates the number of items in a list.tasks is our list.
         print("No tasks available")
 
     else:
         print("\nYour Tasks:")
-
-        for i, task in enumerate(tasks, start=1):
+# represents the task dictionary.
+        for i, task in enumerate(tasks, start=1): # i represents the task number.
 
             if task["completed"]:
                 status = "Completed"
@@ -38,16 +38,16 @@ def view_tasks():
 # Function to complete a task
 def complete_task():
 
-    view_tasks()
+    view_tasks() # Calls the view_tasks() function.
 
     if len(tasks) == 0:
-        return
+        return # immediately stops the function.
 
     number = int(input("Enter task number: "))
 
-    if 1 <= number <= len(tasks):
+    if 1 <= number <= len(tasks): # This checks whether the entered task number is valid.
 
-        tasks[number - 1]["completed"] = True
+        tasks[number - 1]["completed"] = True # Let's understand why we use number - 1.Python list indexing starts from zero. 
 
         print("Task completed successfully!")
 
@@ -76,7 +76,7 @@ def delete_task():
 
 
 # Main program
-while True:
+while True: #A while loop executes repeatedly as long as its condition is true.
 
     print("\n===== TO-DO LIST APPLICATION =====")
 
@@ -102,7 +102,7 @@ while True:
 
     elif choice == "5":
         print("Thank you for using To-Do List!")
-        break
+        break #break is used to stop the loop.
 
     else:
         print("Invalid choice!")
