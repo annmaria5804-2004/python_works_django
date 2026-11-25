@@ -71,7 +71,7 @@ def view_items():
         # Loop through each item in the list
         for item in items:
 
-            # Display the item details
+            # Display the item details, Displaying dictionary values
             print("\nItem ID:", item["id"])
             print("Type:", item["type"])
             print("Item Name:", item["name"])
@@ -97,12 +97,12 @@ def search_item():
     # Initially assume that no item is found
     found = False
 
-    # Check every item in the list
+    # Check every item in the list(Checking all items)
     for item in items:
 
         # Compare the search text with the item name
         # lower() makes the search case-insensitive
-        if search.lower() in item["name"].lower():
+        if search.lower() in item["name"].lower(): #Gets the stored item name and converts it into lowercase.
 
             # Display the matching item details
             print("\nItem found!")
@@ -133,14 +133,14 @@ def mark_returned():
     item_id = input("\nEnter item ID: ")
 
     # Initially assume that the item is not found
-    found = False
+    found = False # and The loop checks each item.
 
     # Check every item in the list
     for item in items:
 
         # Compare the stored ID with the entered ID
-        # str() converts the ID into a string
-        if str(item["id"]) == item_id:
+        # str() converts the ID into a string.and Because input() always returns text.
+        if str(item["id"]) == item_id: # We convert the integer to a string so that both values can be compared.
 
             # Check whether the item is already returned
             if item["status"] == "Returned":
@@ -156,11 +156,11 @@ def mark_returned():
                 # Display success message
                 print("Item marked as returned successfully!")
 
-            # Mark the item as found
+            # Mark the item as found. found = True indicates that the matching item exists.
             found = True
 
             # Stop the loop
-            break
+            break  # immediately stops the loop.
 
     # Check whether the entered ID is invalid
     if found == False:
@@ -174,7 +174,7 @@ def mark_returned():
 # ------------------------------------------
 
 # while True runs the menu continuously
-while True:
+while True: # True means the condition is always true.Therefore, the menu keeps appearing repeatedly.
 
     # Display the application title
     print("\n===== CAMPUS LOST & FOUND TRACKER =====")

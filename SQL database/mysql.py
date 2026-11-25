@@ -105,9 +105,68 @@ int char decimal bool..
 
 # limit >> limit the number of rows displaying
 
+# ================================================================================================
+
+# aggregate functions
+#---------------------------------------
+# count(),>> count the records
+# avg(),>REturn the average
+# min(),>>return the record has
+# minimum value
+# max()>>return the record has
+# maximum value
+# sum()>> return the sum of
+# values
+
+#groupby
+#-------------------------------
+# used to group records
+# based on a common
+# column value
+
+#====================================================================================================
+"""
+Keyword	Meaning	Use
+SELECT	Selects columns	Specifies which columns to display.
+department	Column name	Displays the department name.
+MAX()	Aggregate function	Finds the highest value.
+salary	Column name	Finds the highest salary.
+AS	Alias	Gives a temporary name to a column.
+maximum_salary	Alias name	Displays MAX(salary) under this name.
+FROM	Table selection	Specifies the table from which data is retrieved.
+employee	Table name	Retrieves data from the employee table.
+GROUP BY	Grouping	Groups employees department-wise.
+;	Statement terminator	Indicates the end of the SQL query.
+---------------------------------------------------------------------------------------------------
+Keyword	Meaning	Use
+SELECT	Selects columns	Specifies what to display.
+place	Column name	Displays employee locations.
+COUNT()	Aggregate function	Counts the number of records.
+*	All rows	Counts all rows in each group.
+AS	Alias	Gives a temporary name.
+employee_count	Alias name	Displays the count under this name.
+FROM	Table selection	Specifies the source table.
+employee	Table name	Retrieves employee records.
+GROUP BY	Grouping	Groups employees according to their place.
+ORDER BY	Sorting	Arranges the result.
+DESC	Descending	Sorts from highest to lowest.
+
+--------------------------------------------------------------------------------------------------------
+Important SQL keywords to remember
+Keyword	Full meaning / purpose
+MAX()	Highest value
+MIN()	Lowest value
+SUM()	Total value
+AVG()	Average value
+COUNT()	Number of records
+GROUP BY	Groups similar values
+ORDER BY	Sorts the results
+ASC	Ascending order
+DESC	Descending order
+AS	Temporary column/table name
+WHERE	Filters individual rows
+HAVING	Filters grouped results
 
 
-
-
-
+"""
 
