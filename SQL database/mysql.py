@@ -169,4 +169,4 @@ HAVING	Filters grouped results
 
 
 """
-
+# structure of databse means database name table name then what inside the table and what functions we create.
